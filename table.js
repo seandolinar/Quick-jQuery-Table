@@ -20,6 +20,7 @@ Table.prototype.setData = function(data) {
 Table.prototype.setTableClass = function(tableClass) {
     //sets the table class name
     this.tableClass = tableClass
+    return this
 }
 
 
@@ -64,7 +65,7 @@ Table.prototype.build = function(container) {
 
 //sample data
 var data = {
-    k: ['Name', 'Ocupation', 'Salary', 'Roommate'],
+    k: ['Name', 'Occupation', 'Salary', 'Roommate'],
     v: [['Chandler', 'IT Procurement Manager', '$120,000', 'Joey'],
         ['Joey', 'Out-of-work Actor', '$50,000', 'Chandler'],
         ['Monica', 'Chef', '$80,000', 'Rachel'],
@@ -79,4 +80,5 @@ var table = new Table()
 table
     .setHeader(data.k)
     .setData(data.v)
+    .setTableClass('sean')
     .build()
